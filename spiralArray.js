@@ -1,4 +1,4 @@
-let spiralSketch = s => {
+window.spiralArraySketch = s => {
     const wait = 20;
     let font;
     const dim = $('#dimension');
@@ -18,7 +18,7 @@ let spiralSketch = s => {
     }
 
     s.preload = _ => {
-        font = s.loadFont('/public/assets/PressStart2P.ttf');
+        font = s.loadFont('assets/PressStart2P.ttf');
     }
 
     s.setup = _ => {
@@ -112,5 +112,3 @@ let spiralSketch = s => {
         s.redraw();
     });
 }
-
-let spiralInstance = new p5(spiralSketch);

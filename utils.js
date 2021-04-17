@@ -72,5 +72,9 @@ function getNeighbours(arr, cols, i, j) {
 // Generate a random character
 String.randomChar = _ => String.fromCharCode(Math.random() * 128);
 
+String.prototype.capitalizeFirst = function() {
+    return this[0].toUpperCase() + this.substring(1);
+};
+
 // Returns a Promise that resolves after "ms" Milliseconds
 const timer = ms => new Promise(res => setTimeout(res, ms));

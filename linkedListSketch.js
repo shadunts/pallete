@@ -1,6 +1,6 @@
 // running multiple p5 instances on same page
 // need to use intance mode instead of global
-let linkedListSketch = s => {
+window.linkedListSketch = s => {
     let list;
     s.setup = () => {
         let renderer = s.createCanvas(400, 400);
@@ -71,5 +71,3 @@ let linkedListSketch = s => {
         }
     });
 }
-
-let linkedListInstance = new p5(linkedListSketch);

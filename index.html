@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" href="/public/assets/pxArt.png" type="image/png">
+    <link rel="icon" href="assets/pxArt.png" type="image/png">
     <title>Pallete</title>
 
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/public/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
-    <script src="/public/browser.js"></script>
-    <script src="/public/utils.js"></script>
+    <script src="browser.js"></script>
+    <script src="utils.js"></script>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="nav-brand">
                     <h1>
-                        <img src="/public/assets/pxArt.png" class="pallete-logo">
+                        <img src="./assets/pxArt.png" class="pallete-logo">
                         <span> Pallete</span>
                     </h1>
                     <p>Visualising things.</p>
@@ -61,7 +61,138 @@
             <p class="nes-balloon from-right">Explore<br>the code!</p>
             <i class="nes-octocat"></i>
         </a>
-        <div id="content" class="container"></div>
+        <div id="content" class="container">
+            <div id="home">
+                <link rel="stylesheet" href="home.css" />
+
+                <div class="sections">
+                    <div class="sectionWrapper">
+                        <div id="digitRain">
+                            <canvas id="digitRainCtx" width="300" height="300"></canvas>
+                        </div>
+                        <p class="description" style="margin-top: 7px;">Solutions for popular coding interview questions!</p>
+                    </div>
+                    <div class="sectionWrapper">
+                        <div id="quickSort"></div>
+                        <p class="description">Visualisation of famous problems in Data Structures and Algorithms</p>
+                    </div>
+                    <div class="sectionWrapper">
+                        <div id="fractalTree"></div>
+                        <p class="description">Random cool stuff you can do if you love to code :)</p>
+                    </div>
+
+                </div>
+
+                <script src="./digitRain.js"></script>
+                <script src="./sort.js"></script>
+                <script src="./fractalTree.js"></script>
+            </div>
+            <div id="linkedList" style="display: none;">
+                <link rel="stylesheet" href="linkedList.css" />
+                <div>
+                    <div id="linkedListDescription" class="left">
+                        <h3>Reverse a Linked List</h3>
+                        <p>Given the head of a linked list, implement functionality to add, remove and reverse the linked list. Insert and remove by hitting enter.</p>
+                        <label for="linkedListInsert">Insert: </label>
+                        <input type="number" max="999" id="linkedListInsert">
+                        <label for="linkedListRemove">Remove: </label>
+                        <input type="number" max="999" id="linkedListRemove">
+                    </div>
+                    <div id="linkedListCtx" class="right"></div>
+                </div>
+
+                <script src="linkedListNode.js" async></script>
+                <script src="linkedList.js" async></script>
+                <script src="linkedListSketch.js" async></script>
+
+            </div>
+            <div id="binaryTree" style="display: none;">
+                <link rel="stylesheet" href="binaryTree.css" />
+                <div>
+                    <div id="binaryTreeDescription" class="left">
+                        <h3>Invert a Binary Search Tree</h3>
+                        <p>Given the root of a binary search tree, implement functionality to insert, invert and balance the tree. Insert by hitting enter.</p>
+                        <label for="addNode">Insert: </label>
+                        <input type="number" max="999" id="addNode">
+                    </div>
+                    <div id="binaryTreeCtx" class="right"></div>
+                </div>
+
+                <script src="treeNode.js" async></script>
+                <script src="tree.js" async></script>
+                <script src="treeSketch.js" async></script>
+            </div>
+            <div id="spiralArray" style="display: none;">
+                <link rel="stylesheet" href="spiralArray.css" />
+                <div>
+                    <div class="left">
+                        <h3>Spiral Array</h3>
+                        <p>Given a natural number n, fill a matrix of size ‘nxn’ in spiral (or circular) fashion (clockwise) with natural numbers from 1 to n^2. Use up and down arrows to change the dimension.
+                        </p>
+                        <label for="dimension">Dimension</label>
+                        <input type="number" id="dimension" value="5" min="1" disabled/>
+                    </div>
+                    <div id="spiralArrayCtx" class="right"></div>
+                </div>
+
+                <script src="spiralArrayCell.js" async></script>
+                <script src="spiralArray.js" async></script>
+            </div>
+            <div id="maze" style="display: none;">
+                <link rel="stylesheet" href="maze.css" />
+                <div>
+                    <div id="mazeDescription" class="left">
+                        <h3>Maze</h3>
+                        <p>Implement analgorithm to generate a maze. Use A* search and DFS to solve the maze.</p>
+                    </div>
+                    <div id="mazeCtx" class="right">
+                        <canvas width="400" height="365" class="maze-canvas"></canvas>
+                        <div>
+                            <!-- enabled when maze is fully generated -->
+                            <button id="playButton" class="nes-btn is-primary" disabled>Play</button>
+                            <button id="DFSButton" class="nes-btn is-error" disabled>DFS</button>
+                            <button id="AStarButton" class="nes-btn is-success" disabled>A*</button>
+                        </div>
+                    </div>
+
+                    <script src="play.js" async></script>
+                    <script src="solve.js" async></script>
+                    <script src="cell.js" async></script>
+                    <script src="maze.js" async></script>
+                </div>
+            </div>
+            <div id="sudoku" style="display: none;">
+                <link rel="stylesheet" href="sudoku.css" />
+                <div>
+                    <div id="sudokuDescription" class="left">
+                        <h3>Sudoku</h3>
+                        <p>Implement an algorithm to solve the given state of a sudoku problem. You can insert and delete values manually by clicking on cells.</p>
+                        <button id="sudokuSolve">Solve</button>
+                    </div>
+                    <div id="sudokuCtx" class="right">
+                    </div>
+                </div>
+
+                <script src="sudokuCell.js" async></script>
+                <script src="sudoku.js" async></script>
+                <script src="sudokuSketch.js" async></script>
+
+            </div>
+            <div id="cardioid" style="display: none;">
+                <link rel="stylesheet" href="cardioid.css" />
+                <div>
+                    <div id="cardioidDescription" class="left">
+                        <h3>Cardioid</h3>
+                        <p>A cardioid is a plane curve traced by a point on the perimeter of a circle that is rolling around a fixed circle of the same radius. Generate javascript simulation of cardioid for a circle with a given perimeter using times tables.</p>
+                    </div>
+                    <div id="cardioidCtx" class="right">
+
+                    </div>
+                </div>
+
+                <script src="cardioid.js" async></script>
+            </div>
+        </div>
     </div>
 </body>
 

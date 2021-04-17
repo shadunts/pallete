@@ -2,7 +2,7 @@ let tree;
 
 // running multiple p5 instances on same page
 // need to use intance mode instead of global
-let binaryTreeSketch = s => {
+window.binaryTreeSketch = s => {
     s.setup = () => {
         let renderer = s.createCanvas(400, 400);
         renderer.parent('binaryTreeCtx');
@@ -66,5 +66,3 @@ let binaryTreeSketch = s => {
         }
     });
 }
-
-let binaryTreeInstance = new p5(binaryTreeSketch);
