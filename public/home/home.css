@@ -1,0 +1,44 @@
+.sections {
+    display: flex;
+}
+
+.sections>div {
+    flex: 1;
+}
+
+.sectionWrapper:not(:nth-child(3)) {
+    margin-right: 50px;
+}
+
+#fractalTree,
+#digitRain {
+    display: inline-block;
+}
+
+#fractalTree,
+#quickSort {
+    background-color: #000;
+}
+
+.treeSlider,
+.sortSlider,
+.sortBtn {
+    display: inline-block;
+    color: #fff;
+    font-size: 11px;
+}
+
+.treeSlider {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.sortBtn {
+    margin-left: 40px;
+    padding: 4px 0px;
+}
+
+.sortSlider {
+    margin-left: 5px;
+    float: left;
+}

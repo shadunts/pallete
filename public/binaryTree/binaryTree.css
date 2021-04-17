@@ -1,0 +1,31 @@
+#binaryTreeDescription p {
+    line-height: 20px;
+}
+
+#addNode {
+    width: 100px;
+}
+
+#binaryTree .right {
+    position: relative;
+}
+
+#binaryTreeCtx canvas {
+    margin-top: 40px;
+}
+
+#binaryTreeCtx .balanceBtn {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+}
+
+#binaryTreeCtx .invertBtn {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+}
+
+#binaryTreeCtx .nes-btn:focus {
+    box-shadow: none;
+}

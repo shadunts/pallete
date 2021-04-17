@@ -1,0 +1,18 @@
+#linkedListCtx canvas {
+    margin-top: 40px;
+}
+
+#linkedListInsert,
+#linkedListRemove {
+    width: 100px;
+}
+
+#linkedList .right {
+    position: relative;
+}
+
+#linkedListCtx .reverseBtn {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+}

@@ -1,0 +1,9 @@
+#cardioid canvas {
+    margin-top: 40px;
+    background-color: #000;
+}
+
+#cardioidDescription label {
+    margin-left: 5px;
+    font-size: 10px;
+}

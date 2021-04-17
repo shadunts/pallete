@@ -1,0 +1,8 @@
+#dimension {
+    width: 50px;
+}
+
+#spiralArray canvas {
+    margin-top: 40px;
+    font-weight: bold;
+}
