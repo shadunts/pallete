@@ -209,3 +209,132 @@ input,
 
 
 /* END main content */
+
+#binaryTreeDescription p {
+    line-height: 20px;
+}
+
+#addNode {
+    width: 100px;
+}
+
+#binaryTree .right {
+    position: relative;
+}
+
+#binaryTreeCtx canvas {
+    margin-top: 40px;
+}
+
+#binaryTreeCtx .balanceBtn {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+}
+
+#binaryTreeCtx .invertBtn {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+}
+
+#binaryTreeCtx .nes-btn:focus {
+    box-shadow: none;
+}
+
+#cardioid canvas {
+    margin-top: 40px;
+    background-color: #000;
+}
+
+#cardioidDescription label {
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+.sections {
+    display: flex;
+}
+
+.sections>div {
+    flex: 1;
+}
+
+.sectionWrapper:not(:nth-child(3)) {
+    margin-right: 50px;
+}
+
+#fractalTree,
+#digitRain {
+    display: inline-block;
+}
+
+#fractalTree,
+#quickSort {
+    background-color: #000;
+}
+
+.treeSlider,
+.sortSlider,
+.sortBtn {
+    display: inline-block;
+    color: #fff;
+    font-size: 11px;
+}
+
+.treeSlider {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.sortBtn {
+    margin-left: 40px;
+    padding: 4px 0px;
+}
+
+.sortSlider {
+    margin-left: 5px;
+    float: left;
+}
+
+#linkedListCtx canvas {
+    margin-top: 40px;
+}
+
+#linkedListInsert,
+#linkedListRemove {
+    width: 100px;
+}
+
+#linkedList .right {
+    position: relative;
+}
+
+#linkedListCtx .reverseBtn {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+}
+
+#mazeCtx {
+    margin-top: 40px;
+    background-color: black;
+}
+
+#maze .nes-btn {
+    font-size: 9px;
+    padding: 3px 40px;
+}
+
+#dimension {
+    width: 50px;
+}
+
+#spiralArray canvas {
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+#sudokuCtx canvas {
+    margin-top: 40px;
+}
