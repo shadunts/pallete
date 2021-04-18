@@ -44,11 +44,11 @@ let sudokuSketch = s => {
 
         if (['Backspace', 'Delete', '0'].includes(s.key)) {
             c.val = 0;
-            c.digitColor = '#0f0';
+            c.digitColor = '#04AE00';
             puzzle.clicked = null;
         } else if (!isNaN(digit)) {
             c.val = digit;
-            c.digitColor = puzzle.valid(digit, c) ? '#0f0' : '#f00';
+            c.digitColor = puzzle.valid(digit, c) ? '#04AE00' : '#f00';
             puzzle.clicked = null;
         }
     }

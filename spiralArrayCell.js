@@ -16,9 +16,8 @@ class SpiralArrayCell {
             y: this.y * w // the y coordinate on canvas
         }
 
-        s.stroke(1);
-        s.strokeWeight(4);
-        s.fill('#0f0');
+        s.noStroke();
+        s.fill(COLORS['stroke']);
         s.textSize(Math.min(w / 3, 12));
         s.text(this.val, p.x + w / 2, p.y + w / 2);
     }

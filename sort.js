@@ -4,13 +4,13 @@ let sortSketch = s => {
     let values = []; // values to sort
     let states = []; // numbers indicating in which state the value is
     // color of corresponding states: [default, pivot, partition]
-    const colors = ['#fff', '#f00', '#0f0'];
+    const colors = [COLORS['stroke'], COLORS['sortPivot'], COLORS['sortPartition']];
     let slider;
 
     let w; // bar width on canvas
 
     s.setup = () => {
-        let renderer = s.createCanvas(300, 273);
+        let renderer = s.createCanvas(300, 300);
         renderer.parent('quickSort');
         setupSlider();
         setupButton();
@@ -19,11 +19,11 @@ let sortSketch = s => {
     }
 
     function generate() {
-        w = slider.value();
+        w = 35 - slider.value();
         values = [];
         let length = Math.floor(s.width / w);
         // fill array with random values
-        values = Array.from({ length }, _ => s.random(s.height - 10));
+        values = Array.from({ length }, _ => s.random(s.height - 5));
         // fill states with default
         states = new Array(length).fill(0);
     }
@@ -37,11 +37,11 @@ let sortSketch = s => {
     }
 
     function setupSlider() {
-        label = s.createDiv('Width:');
+        label = s.createDiv('Size:');
         label.addClass('sortSlider');
         label.parent('quickSort');
 
-        slider = s.createSlider(2, 30, 5);
+        slider = s.createSlider(2, 30, 25);
         slider.input(_ => generate());
 
         slider.style('transform', 'translateY(3px)');
@@ -59,9 +59,6 @@ let sortSketch = s => {
             quickSort(arr, s, i - 1),
             quickSort(arr, i + 1, e)
         ]);
-
-        // update state of sorted set
-        states.fill(2, s, e + 1);
     }
 
     // given the array, rearrange the subarray [s, e]
@@ -95,12 +92,12 @@ let sortSketch = s => {
     }
 
     async function swap(arr, i, j) {
-        await timer(10 * w);
+        await timer(5 * w);
         [arr[i], arr[j]] = [arr[j], arr[i]];
     }
 
     s.draw = () => {
-        s.background(0);
+        s.background(COLORS['section']);
 
         for (let i of range(0, values.length)) {
             s.fill(colors[states[i]]);

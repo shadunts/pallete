@@ -27,8 +27,8 @@ function startMaze() {
         // if there is still cell to expand
         if (current) {
             ctx.clearRect(0, 0, w, h);
-            cells.forEach(c => c.show('#000'));
-            current.show('#00b300');
+            cells.forEach(c => c.show(COLORS['default']));
+            current.show(COLORS['stroke']);
             let next = current.getUnvisitedNeighbor();
             // if has unvisited neighbour -> visit it
             if (next) {
@@ -42,7 +42,7 @@ function startMaze() {
             }
         } else {
             // maze is generated -> can play
-            cells[0].show('#000')
+            cells[0].show(COLORS['default'])
             setupPlay(cells);
             setupSolve(cells, ctx, w, h);
             cancelAnimationFrame(frame);

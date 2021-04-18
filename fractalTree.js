@@ -5,19 +5,17 @@ let fractalSketch = s => {
     let branchLen = 65;
 
     s.setup = () => {
-        let renderer = s.createCanvas(300, 273);
+        let renderer = s.createCanvas(300, 300);
         renderer.parent('fractalTree');
         setupSlider();
     }
 
     s.draw = () => {
-        s.background(0);
-        s.stroke(255);
+        s.background(COLORS['section']);
+        s.stroke(COLORS['stroke']);
         // move to the bottom and centralize the start
         s.translate(s.width / 2, s.height);
-
         branch(branchLen);
-
         if (finished) {
             s.noLoop();
         }

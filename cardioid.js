@@ -1,7 +1,7 @@
 // running multiple p5 instances on same page
 // need to use intance mode instead of global
 let cardioidSketch = s => {
-    const pointsCount = 250;
+    const pointsCount = 200;
     let factor = 2;
     let w, h, r, checkbox;
 
@@ -33,7 +33,7 @@ let cardioidSketch = s => {
     s.draw = () => {
         factor += 0.015 * checkbox.checked(); // increase factor if checkbox is checked
 
-        s.background(51);
+        s.background(COLORS['section']);
 
         s.translate(w / 2, h / 2); // move to the center
         s.strokeWeight(2);
