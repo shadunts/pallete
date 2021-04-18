@@ -32,7 +32,7 @@ let spiralSketch = s => {
     }
 
     s.draw = _ => {
-        s.background(0);
+        s.background(COLORS['canvas']);
         let n = +dim.val();
         SpiralArrayCell.width = s.width / n;
         spiral(n);

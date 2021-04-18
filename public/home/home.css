@@ -17,7 +17,7 @@
 
 #fractalTree,
 #quickSort {
-    background-color: #000;
+    background-color: #191919;
 }
 
 .treeSlider,
@@ -25,20 +25,20 @@
 .sortBtn {
     display: inline-block;
     color: #fff;
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .treeSlider {
-    margin-bottom: 5px;
-    margin-left: 10px;
+    margin-top: 7px;
 }
 
 .sortBtn {
+    margin-top: 7px;
     margin-left: 40px;
     padding: 4px 0px;
 }
 
 .sortSlider {
-    margin-left: 5px;
+    margin-top: 7px;
     float: left;
 }

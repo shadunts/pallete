@@ -1,5 +1,5 @@
 class SudokuCell {
-    static DEFAULT_COLOR = '#000';
+    static DEFAULT_COLOR = '#111111';
     static SOLVE_COLOR = '#009e12';
     static CLICK_COLOR = '#62de5b';
     static HOVER_COLOR = '#158e43';
@@ -12,7 +12,7 @@ class SudokuCell {
         this.x = x;
         this.y = y;
         this.puzzle = puzzle; // reference to Sudoku object
-        this.digitColor = '#0f0';
+        this.digitColor = '#04AE00';
     }
 
     show() {
@@ -22,7 +22,7 @@ class SudokuCell {
             y: this.y * w // the y coordinate on canvas
         }
 
-        s.stroke('#0f0');
+        s.stroke('#04AE00');
         s.strokeWeight(1);
         s.textSize(13);
         s.textAlign(s.CENTER, s.CENTER);
@@ -31,22 +31,22 @@ class SudokuCell {
 
         // highlight every third column
         if (this.x % 3 === 0) {
-            s.stroke('#0f0');
+            s.stroke('#04AE00');
             s.strokeWeight(5);
             s.line(p.x, p.y, p.x, p.y + w);
         }
 
         // highlight every third row
         if (this.y % 3 === 0) {
-            s.stroke('#0f0');
+            s.stroke('#04AE00');
             s.strokeWeight(5);
             s.line(p.x, p.y, p.x + w, p.y);
         }
 
         if (this.val) {
-            s.stroke(1);
+            s.noStroke();
             s.fill(this.digitColor);
-            s.textSize(20)
+            s.textSize(20);
             s.text(this.val, p.x + w / 2, p.y + w / 2);
         }
     }

@@ -52,3 +52,8 @@ $(window).on('load', function() {
 
     /* END dom manipulations */
 });
+
+$(document).ready(async _ => {
+    await timer(800);
+    $('#loader').fadeOut();
+});

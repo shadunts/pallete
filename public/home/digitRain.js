@@ -12,13 +12,13 @@ function startRain() {
     // y coordinates of each column
     const verticals = Array(cols).fill(0);
 
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = COLORS['section'];
     ctx.fillRect(0, 0, w, h);
     ctx.font = '15pt monospace';
 
     function rain() {
         // every other iteration will make previous ones fade away
-        ctx.fillStyle = '#0001';
+        ctx.fillStyle = 'rgba(25,25,25,0.1)';
         ctx.fillRect(0, 0, w, h);
 
         ctx.fillStyle = '#0f0';
@@ -27,7 +27,7 @@ function startRain() {
             ctx.fillText(String.randomChar(), i * COLUMN_WIDTH, y);
 
             // randomly move the column up if it travelled at least 150px
-            if (y > 150 && Math.random() < 0.2) verticals[i] = 0;
+            if (y > 250 && Math.random() < 0.2) verticals[i] = 0;
             else verticals[i] = y + COLUMN_WIDTH; // just move down by 20px 
         }
     }

@@ -76,7 +76,7 @@ function setupSolve(cells, ctx, width, height) {
 function drawPath(cells, current, ctx, width, height, color) {
     ctx.clearRect(0, 0, width, height);
     // draw all cells
-    cells.forEach(c => c.show('#000'));
+    cells.forEach(c => c.show(COLORS['default']));
 
     // find the path
     let tmp = current;
