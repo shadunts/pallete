@@ -24,6 +24,7 @@ window.spiralArraySketch = s => {
     s.setup = _ => {
         let renderer = s.createCanvas(400, 400);
         renderer.parent('spiralArrayCtx');
+        s.background(COLORS['canvas']);
         s.textFont(font)
         s.rectMode(s.CORNER);
         s.textAlign(s.CENTER, s.CENTER);
@@ -32,7 +33,6 @@ window.spiralArraySketch = s => {
     }
 
     s.draw = _ => {
-        s.background(COLORS['canvas']);
         let n = +dim.val();
         SpiralArrayCell.width = s.width / n;
         spiral(n);
@@ -108,6 +108,8 @@ window.spiralArraySketch = s => {
         matrix = createMatrix(dim.val());
         // disable while generating matrix
         dim.prop('disabled', true);
+        // clear canvas
+        s.background(COLORS['canvas']);
         // draw the new matrix
         s.redraw();
     });

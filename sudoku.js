@@ -3,15 +3,7 @@ class Sudoku {
     static puzzle = '..53....88......2..7..1.5..4....53...1..7...6..32.6.8..6.5....9..4....3......97..';
     static sketch;
     constructor() {
-        const split = Sudoku.puzzle.split('');
-        // array of SudokuCell objects forming a grid
-        let state = [];
-        for (let [i, v] of split.entries()) {
-            // create a cell with value v, calculate x and y coordinates on canvas
-            let cell = new SudokuCell(v !== '.' ? +v : 0, i % 9, Math.floor(i / 9), this);
-            state.push(cell)
-        }
-        this.state = state;
+        this.createState();
     }
 
     // get cell by x and y coordinates
@@ -79,5 +71,17 @@ class Sudoku {
                 }
             }
         }
+    }
+
+    // array of SudokuCell objects forming a grid
+    createState() {
+        const split = Sudoku.puzzle.split('');
+        let state = [];
+        for (let [i, v] of split.entries()) {
+            // create a cell with value v, calculate x and y coordinates on canvas
+            let cell = new SudokuCell(v !== '.' ? +v : 0, i % 9, Math.floor(i / 9), this);
+            state.push(cell)
+        }
+        this.state = state;
     }
 }

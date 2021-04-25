@@ -6,8 +6,9 @@
     background: #111;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     z-index: 999;
+    top: 0;
 }
 
 #loader {

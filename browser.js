@@ -37,7 +37,7 @@ $(window).on('load', function() {
         { page: 'sudoku', mode: 'p5' },
         { page: 'cardioid', mode: 'p5' },
         { page: 'home', mode: 'p5' }
-    ].forEach(s => $(`#${s.page}Link`).on('click', _ => handler(s)))
+    ].forEach(s => $(`#${s.page}Link`).on('click', _ => handler(s)));
 
     /* END routing */
 
