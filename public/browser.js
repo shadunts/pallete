@@ -34,7 +34,7 @@ $(window).on('load', function() {
         'maze',
         'sudoku',
         'cardioid'
-    ].forEach(s => $(`#${s}Link`).on('click', _ => handler(s)))
+    ].forEach(s => $(`#${s}Link`).on('click', _ => handler(s)));
 
     /* END routing */
 

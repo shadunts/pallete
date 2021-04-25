@@ -18,6 +18,10 @@ let sudokuSketch = s => {
             puzzle.solve();
             $this.prop('disabled', false);
         });
+
+        $('#sudokuReset').on('click', function() {
+            puzzle.createState();
+        });
     }
 
     s.draw = _ => {

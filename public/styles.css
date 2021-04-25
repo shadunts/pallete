@@ -34,7 +34,7 @@ header {
     right: 0;
     z-index: 9;
     height: 116px;
-    border-bottom: 4px solid #dcc528;
+    border-bottom: 4px solid #29475C;
     background-color: #111;
     color: #F6E6C9;
 }
@@ -131,7 +131,7 @@ input,
 #menu {
     height: 100%;
     position: fixed;
-    background-color: #dcc528;
+    background-color: #29475C;
     width: 300px;
     transition: 1000ms all cubic-bezier(0.19, 1, 0.22, 1);
     transform: translateX(-100%);
@@ -167,7 +167,7 @@ input,
 
 .links li:first-child:hover,
 .panel a:hover {
-    background-color: #e3d154;
+    background-color: #5d798c;
 }
 
 .panel a {
