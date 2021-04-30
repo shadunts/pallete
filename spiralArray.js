@@ -1,6 +1,5 @@
 window.spiralArraySketch = s => {
     const wait = 20;
-    let font;
     const dim = $('#dimension');
     let matrix;
 
@@ -17,15 +16,11 @@ window.spiralArraySketch = s => {
         return arr;
     }
 
-    s.preload = _ => {
-        font = s.loadFont('assets/PressStart2P.ttf');
-    }
-
     s.setup = _ => {
         let renderer = s.createCanvas(400, 400);
         renderer.parent('spiralArrayCtx');
         s.background(COLORS['canvas']);
-        s.textFont(font)
+        s.textFont(window.font)
         s.rectMode(s.CORNER);
         s.textAlign(s.CENTER, s.CENTER);
         SpiralArrayCell.sketch = s;

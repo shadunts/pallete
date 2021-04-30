@@ -57,6 +57,6 @@ $(window).on('load', function() {
 });
 
 $(document).ready(async _ => {
-    await timer(800);
+    await timer(1500);
     $('#loader').fadeOut();
 });

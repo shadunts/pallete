@@ -5,6 +5,7 @@ let fractalSketch = s => {
     let branchLen = 65;
 
     s.setup = () => {
+        window.font = s.loadFont('assets/PressStart2P.ttf');
         let renderer = s.createCanvas(300, 300);
         renderer.parent('fractalTree');
         setupSlider();
